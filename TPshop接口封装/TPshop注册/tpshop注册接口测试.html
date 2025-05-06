@@ -116,11 +116,11 @@
                     <tr>
                         <td>
                             <button type="button" class="layui-btn">开始时间</button>
-                            <span class="text-dark">2025-05-04 21:24:04</span>
+                            <span class="text-dark">2025-05-05 16:20:08</span>
                         </td>
                         <td>
                             <button type="button" class="layui-btn">执行时间</button>
-                            <span class="text-dark">0:00:00.391270 s</span>
+                            <span class="text-dark">0:00:24.715209 s</span>
                         </td>
                     </tr>
                     <tr>
@@ -130,7 +130,7 @@
                         </td>
                         <td>
                             <button type="button" class="layui-btn">通过率</button>
-                            <span class="text-dark">83.33%</span>
+                            <span class="text-dark">0.00%</span>
                         </td>
                     </tr>
                     <tr>
@@ -141,9 +141,9 @@
                     </tr>
                     <tr>
                         <td colspan="2" align="center">
-                            <button type="button" class="layui-btn success-btn">成功用例：5</button>
-                            <button type="button" class="layui-btn layui-btn-warm">失败用例：1</button>
-                            <button type="button" class="layui-btn layui-btn-danger">错误用例：0</button>
+                            <button type="button" class="layui-btn success-btn">成功用例：0</button>
+                            <button type="button" class="layui-btn layui-btn-warm">失败用例：0</button>
+                            <button type="button" class="layui-btn layui-btn-danger">错误用例：6</button>
                             <button type="button" class="layui-btn skip-btn">跳过用例：0</button>
                         </td>
                     </tr>
@@ -181,77 +181,551 @@
                 </thead>
 				<tbody>
                 
-    <tr class='failClass'>
+    <tr class='errorClass'>
         <td class="text-center">tp_reg_test.Test_tpshop_register</td>
         <td class="text-center">6</td>
-        <td class="text-center">5</td>
-        <td class="text-center">1</td>
         <td class="text-center">0</td>
+        <td class="text-center">0</td>
+        <td class="text-center">6</td>
         <td class="text-center">0</td>
         <td class="text-center"><button type="button" class="layui-btn layui-btn-xs" onclick="showClassDetail('c1',6)">详细</button></td>
     </tr>
 
 <tr id='ft1.1' class=''>
-    <td class='failCase'><div class='testcase'>test_reg_0</div></td>
+    <td class='errorCase'><div class='testcase'>test_reg_0</div></td>
     <td>
     <a onfocus='this.blur();' data-toggle="collapse" href="javascript:showTestDetail('div_ft1.1')">
-        失败</a>
+        错误</a>
     </td>
     <td colspan='5'>
     <div id='div_ft1.1' class="collapse in">
         <blockquote class="layui-elem-quote">
             <pre>ft1.1: Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Anaconda3\Lib\http\client.py", line 1286, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1332, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1281, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1041, in _send_output
+    self.send(msg)
+  File "D:\Anaconda3\Lib\http\client.py", line 979, in send
+    self.connect()
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x0000000004E2C4D0&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000000004E2C4D0&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "D:\Anaconda3\Lib\site-packages\parameterized\parameterized.py", line 620, in standalone_func
     return func(*(a + p.args), **p.kwargs, **kw)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\PycharmProjects\pythonProject\TPshop接口封装\TPshop注册\tp_reg_test.py", line 25, in test_reg
-    tp_reg_assert(self,res,status,status_code,msg)
-  File "D:\PycharmProjects\pythonProject\TPshop接口封装\TPshop注册\tp_reg_assert.py", line 10, in tp_reg_assert
-    self.assertEqual(status,res_json.get('status'))
-AssertionError: 1 != -1
+  File "D:\PycharmProjects\接口测试学习项目\TPshop接口封装\TPshop注册\tp_reg_test.py", line 23, in test_reg
+    res = api.tpshop_req.get_res(body)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PycharmProjects\接口测试学习项目\TPshop接口封装\TPshop注册\tp_reg_api.py", line 13, in get_res
+    session.get(url='http://localhost/index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697')
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000000004E2C4D0&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
 </pre>
         </blockquote>
     </div>
     </td>
 </tr>
 
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_reg_1</div></td>
-    <td>通过</td>
-    <td colspan='5' align='center' style="color:#428bca"></td>
+<tr id='ft1.2' class=''>
+    <td class='errorCase'><div class='testcase'>test_reg_1</div></td>
+    <td>
+    <a onfocus='this.blur();' data-toggle="collapse" href="javascript:showTestDetail('div_ft1.2')">
+        错误</a>
+    </td>
+    <td colspan='5'>
+    <div id='div_ft1.2' class="collapse in">
+        <blockquote class="layui-elem-quote">
+            <pre>ft1.2: Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Anaconda3\Lib\http\client.py", line 1286, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1332, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1281, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1041, in _send_output
+    self.send(msg)
+  File "D:\Anaconda3\Lib\http\client.py", line 979, in send
+    self.connect()
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x0000000004EA2190&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000000004EA2190&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\parameterized\parameterized.py", line 620, in standalone_func
+    return func(*(a + p.args), **p.kwargs, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PycharmProjects\接口测试学习项目\TPshop接口封装\TPshop注册\tp_reg_test.py", line 23, in test_reg
+    res = api.tpshop_req.get_res(body)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PycharmProjects\接口测试学习项目\TPshop接口封装\TPshop注册\tp_reg_api.py", line 13, in get_res
+    session.get(url='http://localhost/index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697')
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000000004EA2190&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+</pre>
+        </blockquote>
+    </div>
+    </td>
 </tr>
 
-<tr id='pt1.3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_reg_2</div></td>
-    <td>通过</td>
-    <td colspan='5' align='center' style="color:#428bca"></td>
+<tr id='ft1.3' class=''>
+    <td class='errorCase'><div class='testcase'>test_reg_2</div></td>
+    <td>
+    <a onfocus='this.blur();' data-toggle="collapse" href="javascript:showTestDetail('div_ft1.3')">
+        错误</a>
+    </td>
+    <td colspan='5'>
+    <div id='div_ft1.3' class="collapse in">
+        <blockquote class="layui-elem-quote">
+            <pre>ft1.3: Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Anaconda3\Lib\http\client.py", line 1286, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1332, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1281, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1041, in _send_output
+    self.send(msg)
+  File "D:\Anaconda3\Lib\http\client.py", line 979, in send
+    self.connect()
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x0000000004EA14D0&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000000004EA14D0&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\parameterized\parameterized.py", line 620, in standalone_func
+    return func(*(a + p.args), **p.kwargs, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PycharmProjects\接口测试学习项目\TPshop接口封装\TPshop注册\tp_reg_test.py", line 23, in test_reg
+    res = api.tpshop_req.get_res(body)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PycharmProjects\接口测试学习项目\TPshop接口封装\TPshop注册\tp_reg_api.py", line 13, in get_res
+    session.get(url='http://localhost/index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697')
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000000004EA14D0&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+</pre>
+        </blockquote>
+    </div>
+    </td>
 </tr>
 
-<tr id='pt1.4' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_reg_3</div></td>
-    <td>通过</td>
-    <td colspan='5' align='center' style="color:#428bca"></td>
+<tr id='ft1.4' class=''>
+    <td class='errorCase'><div class='testcase'>test_reg_3</div></td>
+    <td>
+    <a onfocus='this.blur();' data-toggle="collapse" href="javascript:showTestDetail('div_ft1.4')">
+        错误</a>
+    </td>
+    <td colspan='5'>
+    <div id='div_ft1.4' class="collapse in">
+        <blockquote class="layui-elem-quote">
+            <pre>ft1.4: Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Anaconda3\Lib\http\client.py", line 1286, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1332, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1281, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1041, in _send_output
+    self.send(msg)
+  File "D:\Anaconda3\Lib\http\client.py", line 979, in send
+    self.connect()
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x0000000004EB53D0&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000000004EB53D0&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\parameterized\parameterized.py", line 620, in standalone_func
+    return func(*(a + p.args), **p.kwargs, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PycharmProjects\接口测试学习项目\TPshop接口封装\TPshop注册\tp_reg_test.py", line 23, in test_reg
+    res = api.tpshop_req.get_res(body)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PycharmProjects\接口测试学习项目\TPshop接口封装\TPshop注册\tp_reg_api.py", line 13, in get_res
+    session.get(url='http://localhost/index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697')
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000000004EB53D0&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+</pre>
+        </blockquote>
+    </div>
+    </td>
 </tr>
 
-<tr id='pt1.5' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_reg_4</div></td>
-    <td>通过</td>
-    <td colspan='5' align='center' style="color:#428bca"></td>
+<tr id='ft1.5' class=''>
+    <td class='errorCase'><div class='testcase'>test_reg_4</div></td>
+    <td>
+    <a onfocus='this.blur();' data-toggle="collapse" href="javascript:showTestDetail('div_ft1.5')">
+        错误</a>
+    </td>
+    <td colspan='5'>
+    <div id='div_ft1.5' class="collapse in">
+        <blockquote class="layui-elem-quote">
+            <pre>ft1.5: Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Anaconda3\Lib\http\client.py", line 1286, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1332, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1281, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1041, in _send_output
+    self.send(msg)
+  File "D:\Anaconda3\Lib\http\client.py", line 979, in send
+    self.connect()
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x0000000004EB7A10&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000000004EB7A10&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\parameterized\parameterized.py", line 620, in standalone_func
+    return func(*(a + p.args), **p.kwargs, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PycharmProjects\接口测试学习项目\TPshop接口封装\TPshop注册\tp_reg_test.py", line 23, in test_reg
+    res = api.tpshop_req.get_res(body)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PycharmProjects\接口测试学习项目\TPshop接口封装\TPshop注册\tp_reg_api.py", line 13, in get_res
+    session.get(url='http://localhost/index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697')
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000000004EB7A10&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+</pre>
+        </blockquote>
+    </div>
+    </td>
 </tr>
 
-<tr id='pt1.6' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_reg_5</div></td>
-    <td>通过</td>
-    <td colspan='5' align='center' style="color:#428bca"></td>
+<tr id='ft1.6' class=''>
+    <td class='errorCase'><div class='testcase'>test_reg_5</div></td>
+    <td>
+    <a onfocus='this.blur();' data-toggle="collapse" href="javascript:showTestDetail('div_ft1.6')">
+        错误</a>
+    </td>
+    <td colspan='5'>
+    <div id='div_ft1.6' class="collapse in">
+        <blockquote class="layui-elem-quote">
+            <pre>ft1.6: Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Anaconda3\Lib\http\client.py", line 1286, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1332, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1281, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Anaconda3\Lib\http\client.py", line 1041, in _send_output
+    self.send(msg)
+  File "D:\Anaconda3\Lib\http\client.py", line 979, in send
+    self.connect()
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x0000000004EB1D90&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000000004EB1D90&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\Lib\site-packages\parameterized\parameterized.py", line 620, in standalone_func
+    return func(*(a + p.args), **p.kwargs, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PycharmProjects\接口测试学习项目\TPshop接口封装\TPshop注册\tp_reg_test.py", line 23, in test_reg
+    res = api.tpshop_req.get_res(body)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PycharmProjects\接口测试学习项目\TPshop接口封装\TPshop注册\tp_reg_api.py", line 13, in get_res
+    session.get(url='http://localhost/index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697')
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /index.php?m=Home&amp;c=User&amp;a=verify&amp;type=user_reg&amp;r=0.5887277084599697 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000000004EB1D90&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+</pre>
+        </blockquote>
+    </div>
+    </td>
 </tr>
 
                 </tbody>
                 <tr id='total_row' class="text-center active">
                     <td align="right">总计</td>
                     <td>6</td>
-                    <td>5</td>
-                    <td>1</td>
                     <td>0</td>
+                    <td>0</td>
+                    <td>6</td>
                     <td>0</td>
                     <td></td>
                 </tr>
@@ -283,10 +757,10 @@ AssertionError: 1 != -1
                 name: '测试结果',
                 type: 'gauge',
                 detail: {
-                    formatter: '83.33%'
+                    formatter: '0.00%'
                 },
                 data: [{
-                    value: '83.33',
+                    value: '0.00',
                     name: '用例通过率'
                 }],
                 axisLine: {
@@ -331,15 +805,15 @@ AssertionError: 1 != -1
                     show: false
                 },
                 data: [{
-                        value: 5,
+                        value: 0,
                         name: '通过'
                     },
                     {
-                        value: 1,
+                        value: 0,
                         name: '失败'
                     },
                     {
-                        value: 0,
+                        value: 6,
                         name: '错误'
                     },
                     {

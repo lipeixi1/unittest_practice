@@ -9,6 +9,7 @@ import tp_reg_api as api
 from tp_reg_param import get_paramdata
 from tp_reg_assert import tp_reg_assert
 
+
 class Test_tpshop_register(unittest.TestCase):
 
     @classmethod

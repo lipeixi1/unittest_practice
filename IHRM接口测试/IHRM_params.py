@@ -24,3 +24,6 @@ def get_param_data():
     for i in data:
         param_data.append(tuple(i.values()))
     return param_data
+
+if __name__ == '__main__':
+    print(get_param_data())
